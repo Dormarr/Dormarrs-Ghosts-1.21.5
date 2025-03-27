@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "dormarr.ghosts.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
