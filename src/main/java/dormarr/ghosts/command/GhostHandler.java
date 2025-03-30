@@ -2,6 +2,7 @@ package dormarr.ghosts.command;
 
 import dormarr.ghosts.DormarrsGhosts;
 import dormarr.ghosts.effect.GhostEffect;
+import dormarr.ghosts.render.GhostRenderer;
 import dormarr.ghosts.util.ModRegistries;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -15,8 +16,10 @@ import net.minecraft.util.math.MathConstants;
 
 public class GhostHandler {
 
+    public static boolean isGhost;
+
     public static boolean toggleGhostMode(ServerPlayerEntity player){
-        boolean isGhost;
+
 
         // Ghost Logic
 
@@ -32,6 +35,7 @@ public class GhostHandler {
             player.sendMessage(Text.of("§aGhost mod enabled."), false);
             isGhost = true;
         }
+
         return isGhost;
     }
 }

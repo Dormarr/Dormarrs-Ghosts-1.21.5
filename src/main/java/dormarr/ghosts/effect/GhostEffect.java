@@ -1,5 +1,7 @@
 package dormarr.ghosts.effect;
 
+import dormarr.ghosts.command.GhostHandler;
+import dormarr.ghosts.render.GhostRenderer;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -21,7 +23,7 @@ public class GhostEffect extends StatusEffect {
     public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier){
         if(entity instanceof PlayerEntity){
             // Do effect stuff.
-
+            GhostRenderer.ToggleVisibility(entity, GhostHandler.isGhost);
 
         }
 
