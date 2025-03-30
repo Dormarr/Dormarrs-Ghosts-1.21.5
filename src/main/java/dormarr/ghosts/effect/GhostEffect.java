@@ -24,7 +24,6 @@ public class GhostEffect extends StatusEffect {
         if(entity instanceof PlayerEntity){
             // Do effect stuff.
             GhostRenderer.ToggleVisibility(entity, GhostHandler.isGhost);
-
         }
 
         return super.applyUpdateEffect(world, entity, amplifier);

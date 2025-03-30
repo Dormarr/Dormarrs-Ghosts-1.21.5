@@ -13,10 +13,22 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.MathConstants;
+import org.apache.logging.log4j.core.jmx.Server;
 
 public class GhostHandler {
 
     public static boolean isGhost;
+    public static int yaw = 0;
+
+
+    public static void ExecuteCommand(ServerPlayerEntity player){
+        toggleGhostMode(player);
+        SetOutline(player);
+    }
+
+    public static void SetOutline(ServerPlayerEntity player){
+        player.setGlowing(isGhost);
+    }
 
     public static boolean toggleGhostMode(ServerPlayerEntity player){
 

@@ -24,33 +24,13 @@ public class MurderCommand {
                         .executes(context -> {
                             ServerPlayerEntity player = context.getSource().getPlayer();
                             if(player != null){
-                                boolean isGhost = GhostHandler.toggleGhostMode(player);
-                                //Ghost networking.
+                                GhostHandler.ExecuteCommand(player);
                             }
                             return 1;
                         })
                 )
         );
     }
-
-    private static int execute(ServerCommandSource source, Collection<? extends Entity> targets){
-        Iterator var2 = targets.iterator();
-
-        while(var2.hasNext()){
-            Entity entity = (Entity) var2.next();
-        }
-
-        if (targets.size() == 1) {
-
-            source.sendFeedback(() -> {
-                return Text.literal("Nice.");
-            }, true);
-        }
-
-        return targets.size();
-    }
-
-
 }
 
 
